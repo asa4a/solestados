@@ -3,6 +3,7 @@
     <head>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <title>Solesta</title>
@@ -11,6 +12,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <style>
+            :root{
+                /* --fontfam: "Roboto", serif;  */
+                --fontfam: "Nunito", serif;
+            }
             .center {
                 margin: auto;
                 width: fit-content;
@@ -29,14 +34,14 @@
                 margin-bottom: 10px;
                 margin-top: 2px;
                 padding:8px;
-                font-family: "Roboto", serif;
+                font-family: var(--fontfam);
                 width: 200px;
                 font-size: 18px;
-                font-weight: 350;
+                font-weight: 400;
                 
             }
             body{
-                background-color: #FFF9D0;
+                background-color: #7abdcd;
                 display: flex;
                 justify-content: center;  /* Centers horizontally */
                 align-items: center;      /* Centers vertically */
@@ -45,11 +50,12 @@
             }
             .main{
                 background-color: #CAF4FF;
+                box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
                 padding: 30px 60px 30px 60px;
                 border-radius: 10px;
             }
             h1{
-                font-family: "Roboto", serif;
+                font-family: var(--fontfam);
                 font-weight: 350;
                 font-style: normal;
                 font-size: 20px;
@@ -83,6 +89,8 @@
             <!-- <h1>“lorem ipsum dolor sit amet (i)”</h1> -->
             <div class="center container">
                 <h2 id = "ele1">SOCIAL MEDIA</h2>
+                <!-- <button id = "ele3" class="button"><a href="https://tiktok.com/@solesta.official" target="_blank">Tiktok</a></button>
+                <button id = "ele2" class="button"><a href="mailto:solestados@gmail.com" target="_blank">Email</a></button> -->
                 <a href="https://instagram.com/solestados" target="_blank" id = "ele2"><button class="button">Instagram</button></a>
                 <a href="https://tiktok.com/@solesta.official" target="_blank" id = "ele3"><button class="button">Tiktok</button></a>
                 <a href="mailto:solestados@gmail.com" target="_blank" id = "ele4"><button class="button">Email</button></a>
@@ -90,9 +98,14 @@
             <br>
             <div class="center container">
                 <h2 id = "ele5">CONTACT PERSON</h2>
-                <a href="#" target="_blank" id = "ele6"><button class="button">Pertiwi</button></a>
-                <a href="#" target="_blank" id = "ele7"><button class="button">Farras</button></a>
-            </div>
+                <div class="hovered">
+                    <a href="#" target="_blank" id = "ele6"><button class="button hovhide">Pertiwi</button></a>
+                    <div class = "flex hovshow"><a href="#"><button class="button">LINE</button></a><a href="#"><button class="button">WA</button></a></div>
+                </div>
+                <div class="hovered">
+                    <a href="#" target="_blank" id = "ele7"><button class="button hovhide">Farras</button></a>
+                    <div class = "flex hovshow"><a href="#"><button class="button">LINE</button></a><a href="#"><button class="button">WA</button></a></div>
+                </div>
         </div>
 
         <style>
@@ -114,6 +127,26 @@
             background: var(--hover-bg);
             box-shadow: 0.25rem 0.25rem var(--bg);
             font-weight: 400;
+            }
+
+            .flex{
+                display: none;
+                width: 200px;
+            }
+            .flex button{
+                width: 95px;
+            }
+
+            a{
+                margin: auto;
+            }
+
+            .hovered:hover .hovshow{
+                display: flex;
+            }
+
+            .hovered:hover .hovhide{
+                display: none;
             }
         </style>
 
